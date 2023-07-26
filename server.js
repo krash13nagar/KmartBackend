@@ -1,4 +1,4 @@
-const app=require("./app");
+const app=require("./index");
 
 const dotenv=require("dotenv");
 const cloudinary=require("cloudinary");
