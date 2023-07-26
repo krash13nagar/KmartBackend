@@ -6,7 +6,7 @@ const fileUpload=require("express-fileupload");
 const dotenv=require("dotenv");
 const cloudinary=require("cloudinary");
 const connectDatabase=require("./config/database");
-
+const cors = require("cors");
 const errorMiddleware=require("./middleware/error");
 
 //Config
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(fileUpload());
-
+app.use(cors());
 
 
 // Route Imports
